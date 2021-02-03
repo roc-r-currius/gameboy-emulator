@@ -41,7 +41,8 @@ target_include_directories( labhelper
     ${CMAKE_SOURCE_DIR}/labhelper
     ${CMAKE_SOURCE_DIR}/external_src/stb-master
     ${CMAKE_SOURCE_DIR}/external_src/tinyobjloader-1.0.6
-    ${SDL2_INCLUDE_DIR}
+    ${SDL2_INCLUDE_DIR}  # Doesn't work for everyone
+	${SDL2_INCLUDE_DIRS} # Same as the line above
     ${GLM_INCLUDE_DIRS}
     ${GLEW_INCLUDE_DIRS}
     ${OPENGL_INCLUDE_DIR}

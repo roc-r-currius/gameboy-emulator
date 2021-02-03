@@ -30,7 +30,10 @@ endmacro(config_build_output)
 add_definitions(-DGLM_ENABLE_EXPERIMENTAL)
 set ( CMAKE_EXPORT_COMPILE_COMMANDS ON )
 set ( CMAKE_BUILD_TYPE DEBUG )
-add_definitions ( -std=c++11 )
+
+if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang") # Remove warning on vs compiler
+    add_definitions ( -std=c++11 )
+endif()
 
 add_subdirectory ( labhelper )
 add_subdirectory ( project )
